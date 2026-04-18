@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://xbiwe0bgrxk4"]
+
+[ext_resource type="AudioStream" uid="uid://blxtshf7b0pul" path="res://audio/Loyalty_Freak_Music_-_01_-_Go_to_the_Picnicchosic.com_(chosic.com).mp3" id="1_n3g55"]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D"]
+process_mode = 3
+stream = ExtResource("1_n3g55")
+autoplay = true
+parameters/looping = true

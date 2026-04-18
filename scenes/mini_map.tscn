@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=3 uid="uid://djjcoqpcbs8dw"]
+
+[ext_resource type="Script" path="res://scripts/mini_map.gd" id="1_gs8t4"]
+[ext_resource type="Texture2D" uid="uid://d17pgfd7uew1" path="res://stuffs/R.png" id="2_0l1gg"]
+
+[node name="MiniMap" type="CanvasLayer"]
+script = ExtResource("1_gs8t4")
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="."]
+z_index = 1
+offset_left = 1536.0
+offset_top = 64.0
+offset_right = 1856.0
+offset_bottom = 244.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="SubViewport" type="SubViewport" parent="SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(320, 180)
+render_target_update_mode = 4
+
+[node name="Camera2D" type="Camera2D" parent="SubViewportContainer/SubViewport"]
+anchor_mode = 0
+zoom = Vector2(0.166, 0.166)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(1696, 154)
+scale = Vector2(0.744341, 0.640366)
+texture = ExtResource("2_0l1gg")

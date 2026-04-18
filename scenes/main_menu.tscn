@@ -1,0 +1,202 @@
+[gd_scene load_steps=17 format=3 uid="uid://epp8dt67kuna"]
+
+[ext_resource type="Script" path="res://scripts/main_menu.gd" id="1_2rlg6"]
+[ext_resource type="AudioStream" uid="uid://btksu502t22f6" path="res://audio/old-radio-button-click-97549.mp3" id="2_himqc"]
+[ext_resource type="FontFile" uid="uid://c07dlwwltd6k" path="res://font/DFVN Rawrote.ttf" id="2_o2xkr"]
+[ext_resource type="AudioStream" uid="uid://beybtt3ac7m14" path="res://audio/button-124476.mp3" id="3_jc36p"]
+[ext_resource type="AudioStream" uid="uid://b7xt6hjrvqxmm" path="res://audio/toy-button-105724.mp3" id="3_ryyb5"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_pvmyv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_qfvyi"]
+bg_color = Color(0.752941, 0.752941, 0.752941, 1)
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2q2cb"]
+content_margin_left = 30.0
+content_margin_top = 10.0
+content_margin_right = 30.0
+bg_color = Color(0.145098, 0.145098, 0.145098, 1)
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_qaqny"]
+Button/styles/hover = SubResource("StyleBoxFlat_qfvyi")
+Button/styles/normal = SubResource("StyleBoxFlat_2q2cb")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jkbwo"]
+bg_color = Color(0, 0, 0, 1)
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sfkum"]
+bg_color = Color(0.753984, 0.753984, 0.753984, 1)
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7cp0r"]
+content_margin_left = 30.0
+content_margin_top = 5.0
+content_margin_right = 30.0
+content_margin_bottom = 10.0
+bg_color = Color(0.144063, 0.144063, 0.144062, 1)
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="Theme" id="Theme_wdx7k"]
+/styles/normal = SubResource("StyleBoxFlat_jkbwo")
+Button/styles/hover = SubResource("StyleBoxFlat_sfkum")
+Button/styles/normal = SubResource("StyleBoxFlat_7cp0r")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_awkl1"]
+bg_color = Color(0.752941, 0.752941, 0.752941, 1)
+border_width_bottom = 5
+border_color = Color(0, 0, 0, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 30.0
+expand_margin_top = 5.0
+expand_margin_right = 30.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mn6jf"]
+bg_color = Color(0.145098, 0.145098, 0.145098, 1)
+border_width_bottom = 5
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+expand_margin_left = 30.0
+expand_margin_top = 5.0
+expand_margin_right = 30.0
+
+[sub_resource type="Theme" id="Theme_gu1cn"]
+Button/styles/hover = SubResource("StyleBoxFlat_awkl1")
+Button/styles/normal = SubResource("StyleBoxFlat_mn6jf")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2rlg6")
+
+[node name="Old-radio-button-click-97549" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_himqc")
+volume_db = 9.176
+
+[node name="Toy-button-105724" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_ryyb5")
+volume_db = -0.58
+
+[node name="Button-124476" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_jc36p")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(0.0196078, 0.2, 0.376471, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("CanvasTexture_pvmyv")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+offset_left = 16.0
+offset_top = 107.0
+offset_right = 1904.0
+offset_bottom = 472.0
+theme_override_colors/font_outline_color = Color(0.16488, 0.0855582, 0.02721, 1)
+theme_override_constants/shadow_offset_x = 15
+theme_override_constants/shadow_offset_y = 0
+theme_override_constants/shadow_outline_size = 45
+theme_override_fonts/font = ExtResource("2_o2xkr")
+theme_override_font_sizes/font_size = 302
+text = "Moore dijkstra"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Start" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = -2.0
+offset_right = 181.0
+offset_bottom = 99.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_qaqny")
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o2xkr")
+theme_override_font_sizes/font_size = 85
+text = "Bắt đầu"
+
+[node name="Instructions" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.0
+offset_top = 148.0
+offset_right = 181.0
+offset_bottom = 249.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_wdx7k")
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o2xkr")
+theme_override_font_sizes/font_size = 85
+text = "Hướng dẫn"
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -96.0
+offset_top = 299.0
+offset_right = 96.0
+offset_bottom = 390.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_gu1cn")
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_o2xkr")
+theme_override_font_sizes/font_size = 85
+text = "Thoát"
+
+[connection signal="mouse_entered" from="Start" to="." method="_on_start_mouse_entered"]
+[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="mouse_entered" from="Instructions" to="." method="_on_instructions_mouse_entered"]
+[connection signal="mouse_entered" from="Exit" to="." method="_on_exit_mouse_entered"]

@@ -1,0 +1,81 @@
+[gd_scene load_steps=12 format=3 uid="uid://clukesohylqom"]
+
+[ext_resource type="Texture2D" uid="uid://dmy0rfiomjspv" path="res://assets/galletcity/Modern_Interiors_Free_v2.2/Modern tiles_Free/Characters_free/Bob_phone_16x16.png" id="1_b1t00"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hxlul"]
+atlas = ExtResource("1_b1t00")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6mvb2"]
+atlas = ExtResource("1_b1t00")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2ylat"]
+atlas = ExtResource("1_b1t00")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dx15e"]
+atlas = ExtResource("1_b1t00")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jfe8"]
+atlas = ExtResource("1_b1t00")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xnny8"]
+atlas = ExtResource("1_b1t00")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0v5qx"]
+atlas = ExtResource("1_b1t00")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krmga"]
+atlas = ExtResource("1_b1t00")
+region = Rect2(112, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85fyd"]
+atlas = ExtResource("1_b1t00")
+region = Rect2(128, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4pqpb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hxlul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6mvb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2ylat")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dx15e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jfe8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xnny8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0v5qx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krmga")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85fyd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="waiter" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4pqpb")
+autoplay = "default"
+frame_progress = 0.952874

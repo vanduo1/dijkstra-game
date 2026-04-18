@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://boboy3dp877eq"]
+
+[ext_resource type="Texture2D" uid="uid://pd5xbphdg58l" path="res://assets/characters/NPC_Characters_v1.0/Male4.png" id="1_ik5qa"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aowg8"]
+atlas = ExtResource("1_ik5qa")
+region = Rect2(96, 336, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6kl0u"]
+atlas = ExtResource("1_ik5qa")
+region = Rect2(128, 336, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6kwb"]
+atlas = ExtResource("1_ik5qa")
+region = Rect2(160, 336, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yl03i"]
+atlas = ExtResource("1_ik5qa")
+region = Rect2(192, 336, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nh2tg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aowg8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6kl0u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6kwb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yl03i")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="male" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_nh2tg")
+autoplay = "default"
+frame_progress = 0.207494

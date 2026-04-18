@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://d4bk4pg2yxsxj"]
+
+[ext_resource type="Texture2D" uid="uid://pd5xbphdg58l" path="res://assets/characters/NPC_Characters_v1.0/Male4.png" id="1_72p4c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s6geh"]
+atlas = ExtResource("1_72p4c")
+region = Rect2(96, 480, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_relgc"]
+atlas = ExtResource("1_72p4c")
+region = Rect2(128, 480, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jdjos"]
+atlas = ExtResource("1_72p4c")
+region = Rect2(160, 480, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_msj8w"]
+atlas = ExtResource("1_72p4c")
+region = Rect2(192, 480, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nh2tg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s6geh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_relgc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jdjos")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_msj8w")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="male" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_nh2tg")
+autoplay = "default"
+frame_progress = 0.911371

@@ -1,0 +1,47 @@
+[gd_scene load_steps=7 format=3 uid="uid://iaih6c3nr1a2"]
+
+[ext_resource type="Texture2D" uid="uid://i5hfiwpmrcka" path="res://assets/characters/NPC_Characters_v1.0/Female2.png" id="1_ekk8l"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fpsxh"]
+atlas = ExtResource("1_ekk8l")
+region = Rect2(96, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rax1"]
+atlas = ExtResource("1_ekk8l")
+region = Rect2(128, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_16wla"]
+atlas = ExtResource("1_ekk8l")
+region = Rect2(160, 48, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nrihd"]
+atlas = ExtResource("1_ekk8l")
+region = Rect2(192, 48, 32, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nh2tg"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fpsxh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rax1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_16wla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nrihd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="female1" type="CharacterBody2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -16)
+sprite_frames = SubResource("SpriteFrames_nh2tg")
+autoplay = "default"
+frame_progress = 0.258605

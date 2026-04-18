@@ -1,0 +1,688 @@
+[gd_scene load_steps=80 format=3 uid="uid://bua1ucuaw62qo"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_hcjku"]
+[ext_resource type="PackedScene" uid="uid://cy423pprhhly1" path="res://scenes/tile_map2.tscn" id="2_4ynj4"]
+[ext_resource type="PackedScene" uid="uid://b3gtw7u22faek" path="res://scenes/player.tscn" id="2_ah7kb"]
+[ext_resource type="PackedScene" uid="uid://djjcoqpcbs8dw" path="res://scenes/mini_map.tscn" id="4_b7e0x"]
+[ext_resource type="Script" path="res://scripts/camera_2d.gd" id="4_fhlg8"]
+[ext_resource type="Texture2D" uid="uid://cjkofqqunv50" path="res://assets/GUI/png/Counter/Example.png" id="7_qp6cu"]
+[ext_resource type="Script" path="res://scripts/panel.gd" id="8_3sknf"]
+[ext_resource type="Texture2D" uid="uid://b34d30ra57kl1" path="res://assets/Pipoya Popup  Emotes Pack/pipo-popupemotes Split images/pipo-popupemotes153.png" id="9_mgt32"]
+[ext_resource type="FontFile" uid="uid://myvisgpl4ntg" path="res://font/SuperDream-ax3vE.ttf" id="9_u7k1m"]
+[ext_resource type="Texture2D" uid="uid://drli21alse5cv" path="res://assets/Pipoya Popup  Emotes Pack/pipo-popupemotes Split images/pipo-popupemotes034.png" id="10_3tvgc"]
+[ext_resource type="Script" path="res://scripts/start.gd" id="10_74qej"]
+[ext_resource type="Script" path="res://scripts/light_timer.gd" id="11_qlmnf"]
+[ext_resource type="Texture2D" uid="uid://l5khru7ua0ri" path="res://assets/Pipoya Popup  Emotes Pack/pipo-popupemotes Split images/pipo-popupemotes032.png" id="11_uxjqt"]
+[ext_resource type="Script" path="res://scripts/game_over.gd" id="12_cyn5l"]
+[ext_resource type="Texture2D" uid="uid://cyf7w7m2kikyo" path="res://assets/Pipoya Popup  Emotes Pack/pipo-popupemotes Split images/pipo-popupemotes012.png" id="12_lx03h"]
+[ext_resource type="Texture2D" uid="uid://cjnuhvsxg0jkq" path="res://assets/GUI/GUI.png" id="13_54mn2"]
+[ext_resource type="AudioStream" uid="uid://b8u8vbnf7wopw" path="res://audio/mixkit-tick-tock-clock-timer-1045.wav" id="15_pmhed"]
+[ext_resource type="FontFile" uid="uid://c07dlwwltd6k" path="res://font/DFVN Rawrote.ttf" id="16_c7wan"]
+[ext_resource type="Script" path="res://scripts/win.gd" id="16_w1aso"]
+[ext_resource type="AudioStream" uid="uid://b0bbvrwh7qmlo" path="res://audio/game-over-39-199830.mp3" id="17_n07bv"]
+[ext_resource type="PackedScene" uid="uid://1i84gyol4hfi" path="res://scenes/female_1.tscn" id="17_uj68p"]
+[ext_resource type="PackedScene" uid="uid://bri6tdveanxse" path="res://scenes/female_2.tscn" id="18_4yw2q"]
+[ext_resource type="AudioStream" uid="uid://btksu502t22f6" path="res://audio/old-radio-button-click-97549.mp3" id="18_8g5a1"]
+[ext_resource type="Script" path="res://scripts/pause.gd" id="18_fnb5p"]
+[ext_resource type="AudioStream" uid="uid://bwwxhtu2ssixq" path="res://audio/cute-level-up-3-189853.mp3" id="18_p0g8w"]
+[ext_resource type="PackedScene" uid="uid://dy20ki6w40nca" path="res://scenes/female_3.tscn" id="19_n1j63"]
+[ext_resource type="Texture2D" uid="uid://dokxuvth0jh5i" path="res://assets/Pipoya Popup  Emotes Pack/pipo-popupemotes Split images/pipo-popupemotes105.png" id="20_3vlha"]
+[ext_resource type="PackedScene" uid="uid://darmeav1x5g3d" path="res://scenes/female_4.tscn" id="20_7jc2u"]
+[ext_resource type="PackedScene" uid="uid://iaih6c3nr1a2" path="res://scenes/female_5.tscn" id="21_x8b18"]
+[ext_resource type="PackedScene" uid="uid://cdjtauqi4fobm" path="res://scenes/female_6.tscn" id="22_ho84k"]
+[ext_resource type="Texture2D" uid="uid://bh7eydop7mdfu" path="res://assets/Pipoya Popup  Emotes Pack/pipo-popupemotes Split images/pipo-popupemotes108.png" id="22_pc1v6"]
+[ext_resource type="Texture2D" uid="uid://crcongrc3471r" path="res://assets/Pipoya Popup  Emotes Pack/pipo-popupemotes Split images/pipo-popupemotes103.png" id="23_d8p7w"]
+[ext_resource type="PackedScene" uid="uid://cpwhjk0ojwgeb" path="res://scenes/female_7.tscn" id="23_xnsgb"]
+[ext_resource type="PackedScene" uid="uid://d26an5ncoheqa" path="res://scenes/female_8.tscn" id="24_7x5te"]
+[ext_resource type="Texture2D" uid="uid://2vi36muq4tnx" path="res://assets/Pipoya Popup  Emotes Pack/pipo-popupemotes Split images/pipo-popupemotes101.png" id="24_lh6q2"]
+[ext_resource type="PackedScene" uid="uid://d4bk4pg2yxsxj" path="res://scenes/male_1.tscn" id="25_0cllh"]
+[ext_resource type="PackedScene" uid="uid://boboy3dp877eq" path="res://scenes/male_2.tscn" id="26_7l3cx"]
+[ext_resource type="PackedScene" uid="uid://bwp4iwpem4xwm" path="res://scenes/male_3.tscn" id="27_dr4ug"]
+[ext_resource type="PackedScene" uid="uid://3yoa48oj7cvn" path="res://scenes/male_4.tscn" id="28_va3s0"]
+[ext_resource type="PackedScene" uid="uid://juqhj171h7ax" path="res://scenes/male_5.tscn" id="29_11nus"]
+[ext_resource type="PackedScene" uid="uid://bexpod3xt3w12" path="res://scenes/male_6.tscn" id="30_df4ea"]
+[ext_resource type="PackedScene" uid="uid://vniwb7qs7mi0" path="res://scenes/male_7.tscn" id="31_mdott"]
+[ext_resource type="PackedScene" uid="uid://boj5pxgjiidy4" path="res://scenes/male_8.tscn" id="32_jqsa8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e6ywf"]
+texture = ExtResource("7_qp6cu")
+region_rect = Rect2(11.9165, 1.8856, 144.051, 63.0146)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g15a6"]
+atlas = ExtResource("9_mgt32")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yxpxl"]
+atlas = ExtResource("9_mgt32")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cq4oy"]
+atlas = ExtResource("9_mgt32")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pb2q2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g15a6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yxpxl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cq4oy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wwmoe"]
+atlas = ExtResource("10_3tvgc")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ocjru"]
+atlas = ExtResource("10_3tvgc")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pkro"]
+atlas = ExtResource("10_3tvgc")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4k77d"]
+atlas = ExtResource("11_uxjqt")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8rbgi"]
+atlas = ExtResource("11_uxjqt")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amayf"]
+atlas = ExtResource("11_uxjqt")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqklk"]
+atlas = ExtResource("12_lx03h")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rs861"]
+atlas = ExtResource("12_lx03h")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gda38"]
+atlas = ExtResource("12_lx03h")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lvdxx"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wwmoe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ocjru")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pkro")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4k77d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8rbgi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amayf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqklk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rs861")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gda38")
+}],
+"loop": true,
+"name": &"default",
+"speed": 6.0
+}]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h72ct"]
+texture = ExtResource("13_54mn2")
+region_rect = Rect2(2.24397, 34.0845, 43.5707, 43.7328)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8yntw"]
+texture = ExtResource("13_54mn2")
+region_rect = Rect2(97.0417, 37.0391, 23.9581, 21.9051)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eetq6"]
+atlas = ExtResource("20_3vlha")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xeivh"]
+atlas = ExtResource("20_3vlha")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_brxqx"]
+atlas = ExtResource("20_3vlha")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dk27x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eetq6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xeivh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_brxqx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d1hxe"]
+atlas = ExtResource("22_pc1v6")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnxkl"]
+atlas = ExtResource("22_pc1v6")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yjyac"]
+atlas = ExtResource("22_pc1v6")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o2r4p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d1hxe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tnxkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yjyac")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wcetw"]
+atlas = ExtResource("23_d8p7w")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p2fko"]
+atlas = ExtResource("23_d8p7w")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_caumn"]
+atlas = ExtResource("23_d8p7w")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bs4ir"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wcetw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p2fko")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_caumn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvte3"]
+atlas = ExtResource("24_lh6q2")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w0qlm"]
+atlas = ExtResource("24_lh6q2")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qte5y"]
+atlas = ExtResource("24_lh6q2")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g668a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvte3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w0qlm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qte5y")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_c3dp4"]
+bg_color = Color(0.497909, 0.664205, 0.861243, 1)
+border_color = Color(0.10748, 0.10748, 0.10748, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xynbf"]
+bg_color = Color(0.588235, 0.152941, 0.0235294, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+expand_margin_right = 10.0
+
+[sub_resource type="Theme" id="Theme_4rjl4"]
+/styles/normal = SubResource("StyleBoxFlat_c3dp4")
+Label/font_sizes/font_size = 30
+Label/fonts/font = ExtResource("16_c7wan")
+Label/styles/normal = SubResource("StyleBoxFlat_xynbf")
+
+[node name="game" type="Node2D"]
+script = ExtResource("1_hcjku")
+
+[node name="map" parent="." instance=ExtResource("2_4ynj4")]
+
+[node name="Player" parent="." instance=ExtResource("2_ah7kb")]
+z_index = 1
+position = Vector2(1016, 480)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+process_mode = 3
+position = Vector2(0, -8)
+zoom = Vector2(2.715, 2.715)
+limit_left = 0
+limit_top = 0
+limit_right = 1920
+limit_bottom = 1080
+position_smoothing_enabled = true
+position_smoothing_speed = 1.5
+rotation_smoothing_enabled = true
+rotation_smoothing_speed = 1.5
+script = ExtResource("4_fhlg8")
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PackedVector2Array(152, 120)
+width = 5.0
+default_color = Color(1, 0.752941, 0.14902, 0.690196)
+
+[node name="MiniMap" parent="." node_paths=PackedStringArray("player", "tileMap", "end") instance=ExtResource("4_b7e0x")]
+process_mode = 3
+player = NodePath("../Player")
+tileMap = NodePath("../map")
+end = NodePath("../End")
+
+[node name="GameTimer" type="CanvasLayer" parent="."]
+script = ExtResource("8_3sknf")
+
+[node name="Panel" type="Panel" parent="GameTimer"]
+anchors_preset = -1
+anchor_left = 0.008
+anchor_top = 0.015
+anchor_right = 0.008
+anchor_bottom = 0.015
+offset_left = 48.64
+offset_top = 63.8
+offset_right = 305.64
+offset_bottom = 183.8
+theme_override_styles/panel = SubResource("StyleBoxTexture_e6ywf")
+
+[node name="Label" type="Label" parent="GameTimer"]
+offset_left = 192.0
+offset_top = 80.0
+offset_right = 272.0
+offset_bottom = 192.0
+theme_override_colors/font_color = Color(0.997707, 0.768178, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0.529412, 0.368627, 0.0941176, 1)
+theme_override_constants/shadow_offset_x = 5
+theme_override_constants/shadow_offset_y = -4
+theme_override_constants/outline_size = 25
+theme_override_constants/shadow_outline_size = 34
+theme_override_fonts/font = ExtResource("9_u7k1m")
+theme_override_font_sizes/font_size = 53
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Timer" type="Timer" parent="GameTimer"]
+
+[node name="Start" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+z_index = 100
+position = Vector2(1029.48, -45.4813)
+scale = Vector2(2.65741, 2.65741)
+sprite_frames = SubResource("SpriteFrames_pb2q2")
+autoplay = "default"
+frame_progress = 0.22701
+script = ExtResource("10_74qej")
+
+[node name="End" type="AnimatedSprite2D" parent="."]
+process_mode = 3
+z_index = 100
+position = Vector2(878.963, -27.8339)
+scale = Vector2(2.06483, 2.06483)
+sprite_frames = SubResource("SpriteFrames_lvdxx")
+autoplay = "default"
+frame_progress = 0.441236
+offset = Vector2(0, -7.19)
+
+[node name="LightTimer" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("11_qlmnf")
+
+[node name="Mixkit-tick-tock-clock-timer-1045" type="AudioStreamPlayer" parent="LightTimer"]
+stream = ExtResource("15_pmhed")
+
+[node name="Panel" type="Panel" parent="LightTimer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 624.0
+offset_top = 200.0
+offset_right = -696.0
+offset_bottom = -272.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_h72ct")
+
+[node name="TimerLight" type="Timer" parent="LightTimer"]
+
+[node name="Label" type="Label" parent="LightTimer"]
+offset_left = 744.0
+offset_top = 344.0
+offset_right = 1088.0
+offset_bottom = 643.0
+theme_override_colors/font_shadow_color = Color(0.870994, 0.461392, 1.92523e-07, 0.988235)
+theme_override_constants/shadow_offset_x = 8
+theme_override_constants/shadow_offset_y = -4
+theme_override_constants/shadow_outline_size = 18
+theme_override_fonts/font = ExtResource("9_u7k1m")
+theme_override_font_sizes/font_size = 256
+text = "00"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+script = ExtResource("12_cyn5l")
+
+[node name="Old-radio-button-click-97549" type="AudioStreamPlayer" parent="GameOver"]
+stream = ExtResource("18_8g5a1")
+volume_db = 13.255
+
+[node name="Game-over-39-199830" type="AudioStreamPlayer" parent="GameOver"]
+stream = ExtResource("17_n07bv")
+volume_db = -15.804
+
+[node name="Panel" type="Panel" parent="GameOver"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00115, 0.994602)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_8yntw")
+
+[node name="Label" type="Label" parent="GameOver"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -528.0
+offset_top = 152.0
+offset_right = 528.0
+offset_bottom = 592.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.910532, 0.248687, 3.85046e-07, 1)
+theme_override_colors/font_outline_color = Color(1, 0.827451, 0.337255, 1)
+theme_override_constants/outline_size = 40
+theme_override_fonts/font = ExtResource("16_c7wan")
+theme_override_font_sizes/font_size = 341
+text = "you lose !!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TryAgain" type="Button" parent="GameOver"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 132.0
+offset_right = 157.0
+offset_bottom = 226.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("16_c7wan")
+theme_override_font_sizes/font_size = 85
+text = "TRY AGAIN"
+
+[node name="Exit" type="Button" parent="GameOver"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -160.0
+offset_top = 268.0
+offset_right = 157.0
+offset_bottom = 362.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("16_c7wan")
+theme_override_font_sizes/font_size = 85
+text = "EXIT"
+
+[node name="Win" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("16_w1aso")
+
+[node name="Cute-level-up-3-189853" type="AudioStreamPlayer" parent="Win"]
+stream = ExtResource("18_p0g8w")
+
+[node name="Panel" type="Panel" parent="Win"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00115, 0.994602)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_styles/panel = SubResource("StyleBoxTexture_8yntw")
+
+[node name="Label" type="Label" parent="Win"]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -528.0
+offset_top = 152.0
+offset_right = 528.0
+offset_bottom = 592.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.910532, 0.248687, 3.85046e-07, 1)
+theme_override_colors/font_outline_color = Color(1, 0.827451, 0.337255, 1)
+theme_override_constants/outline_size = 40
+theme_override_fonts/font = ExtResource("16_c7wan")
+theme_override_font_sizes/font_size = 341
+text = "you win !!"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TryAgain" type="Button" parent="Win"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -136.0
+offset_top = 106.0
+offset_right = 119.0
+offset_bottom = 189.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("16_c7wan")
+theme_override_font_sizes/font_size = 85
+text = "PLAY AGAIN"
+
+[node name="Exit" type="Button" parent="Win"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.5
+offset_top = 244.0
+offset_right = 132.5
+offset_bottom = 327.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("16_c7wan")
+theme_override_font_sizes/font_size = 85
+text = "EXIT"
+
+[node name="TrafficLightCost" type="Node2D" parent="."]
+process_mode = 3
+
+[node name="number4" type="AnimatedSprite2D" parent="TrafficLightCost"]
+process_mode = 3
+z_index = 100
+position = Vector2(392, -24)
+sprite_frames = SubResource("SpriteFrames_dk27x")
+autoplay = "default"
+frame_progress = 0.149371
+
+[node name="number7" type="AnimatedSprite2D" parent="TrafficLightCost"]
+process_mode = 3
+z_index = 100
+position = Vector2(352, -24)
+sprite_frames = SubResource("SpriteFrames_o2r4p")
+autoplay = "default"
+frame_progress = 0.605254
+
+[node name="number2" type="AnimatedSprite2D" parent="TrafficLightCost"]
+process_mode = 3
+z_index = 100
+position = Vector2(432, -24)
+sprite_frames = SubResource("SpriteFrames_bs4ir")
+autoplay = "default"
+frame_progress = 0.375978
+
+[node name="number0" type="AnimatedSprite2D" parent="TrafficLightCost"]
+process_mode = 3
+z_index = 100
+position = Vector2(472, -24)
+sprite_frames = SubResource("SpriteFrames_g668a")
+autoplay = "default"
+frame_progress = 0.614099
+
+[node name="Goals" type="Node2D" parent="."]
+process_mode = 3
+top_level = true
+
+[node name="female1" parent="Goals" groups=["Customers"] instance=ExtResource("17_uj68p")]
+position = Vector2(1448, 344)
+
+[node name="female2" parent="Goals" groups=["Customers"] instance=ExtResource("18_4yw2q")]
+position = Vector2(536, 448)
+
+[node name="female3" parent="Goals" groups=["Customers"] instance=ExtResource("19_n1j63")]
+position = Vector2(1320, 1048)
+
+[node name="female4" parent="Goals" groups=["Customers"] instance=ExtResource("20_7jc2u")]
+position = Vector2(728, 624)
+
+[node name="female5" parent="Goals" groups=["Customers"] instance=ExtResource("21_x8b18")]
+position = Vector2(1016, 712)
+
+[node name="female6" parent="Goals" groups=["Customers"] instance=ExtResource("22_ho84k")]
+position = Vector2(1880, 600)
+
+[node name="female7" parent="Goals" groups=["Customers"] instance=ExtResource("23_xnsgb")]
+position = Vector2(472, 504)
+
+[node name="female8" parent="Goals" groups=["Customers"] instance=ExtResource("24_7x5te")]
+position = Vector2(640, 1048)
+
+[node name="male" parent="Goals" groups=["Customers"] instance=ExtResource("25_0cllh")]
+position = Vector2(1288, 776)
+
+[node name="male2" parent="Goals" groups=["Customers"] instance=ExtResource("26_7l3cx")]
+position = Vector2(760, 504)
+
+[node name="male3" parent="Goals" groups=["Customers"] instance=ExtResource("27_dr4ug")]
+position = Vector2(448, 344)
+
+[node name="male4" parent="Goals" groups=["Customers"] instance=ExtResource("28_va3s0")]
+position = Vector2(472, 776)
+
+[node name="male5" parent="Goals" groups=["Customers"] instance=ExtResource("29_11nus")]
+position = Vector2(64, 568)
+
+[node name="male6" parent="Goals" groups=["Customers"] instance=ExtResource("30_df4ea")]
+position = Vector2(952, 992)
+
+[node name="male7" parent="Goals" groups=["Customers"] instance=ExtResource("31_mdott")]
+position = Vector2(24, 1024)
+
+[node name="male8" parent="Goals" groups=["Customers"] instance=ExtResource("32_jqsa8")]
+position = Vector2(1824, 808)
+
+[node name="Pause" type="Node2D" parent="."]
+process_mode = 3
+script = ExtResource("18_fnb5p")
+
+[node name="Message" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Message"]
+z_index = 110
+layout_mode = 2
+offset_left = 776.0
+offset_top = 120.0
+offset_right = 1232.0
+offset_bottom = 171.0
+grow_horizontal = 2
+grow_vertical = 2
+theme = SubResource("Theme_4rjl4")
+text = "Nhấn SPACE để tiếp tục hoặc tạm dừng."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="Message"]
+z_index = 90
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+
+[connection signal="timeout" from="GameTimer/Timer" to="Player" method="_on_timer_timeout"]
+[connection signal="timeout" from="GameTimer/Timer" to="GameOver" method="_on_timer_timeout"]
+[connection signal="pressed" from="GameOver/TryAgain" to="GameOver" method="_on_try_again_pressed"]
+[connection signal="pressed" from="GameOver/Exit" to="GameOver" method="_on_try_again_pressed"]
+[connection signal="pressed" from="GameOver/Exit" to="GameOver" method="_on_exit_pressed"]
+[connection signal="pressed" from="Win/TryAgain" to="Win" method="_on_try_again_pressed"]
+[connection signal="pressed" from="Win/Exit" to="Win" method="_on_exit_pressed"]
